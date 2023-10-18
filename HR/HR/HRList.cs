@@ -166,13 +166,11 @@ namespace AO
         }
         private bool ValidateBankCardNumber(string bankCardNumber)
         {
-            // Check that the bank card number is 16 digits long.
             if (bankCardNumber.Length != 16)
             {
                 return false;
             }
 
-            // Check that the bank card number is a valid format.
             Regex regex = new Regex(@"^\d{16}$");
             if (!regex.IsMatch(bankCardNumber))
             {
